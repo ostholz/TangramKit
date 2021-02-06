@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 //
 //  Package.swift
 //
@@ -11,11 +11,12 @@ import PackageDescription
 
 let package = Package(
     name: "TangramKit",
+    platforms: [
+        .iOS(.v9),
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "TangramKit",
-            targets: ["TangramKit"]),
+        .library(name: "TangramKit", targets: ["TangramKit"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,8 +25,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-        .target(
-            name: "TangramKit",
-            path: "TangramKit"),
+        .target(name: "TangramKit", path: "TangramKit")
     ]
 )
